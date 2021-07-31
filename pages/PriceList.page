@@ -1,0 +1,12 @@
+<apex:page showHeader="false" controller="PriceListPageController" renderAs="PDF">
+  <apex:pageBlock title="Price List for {!tourist.Name} {!tourist.LastName__c}">
+    <apex:pageBlockTable cellpadding="10px" border="1px" width="700px" value="{!trips}" var="trip">
+        <apex:column value="{!trip.Name}"/>
+        <apex:column value="{!trip.Start_Date__c}"/>
+        <apex:column value="{!trip.Departure_Space_Point__r.Name}"/>
+        <apex:column value="{!trip.Departure_Space_Point__r.Country__c}"/>
+        <apex:column value="{!trip.Departure_Space_Point__r.City__c}"/>
+        <apex:column value="{!trip.Price__c}"/>
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+</apex:page>

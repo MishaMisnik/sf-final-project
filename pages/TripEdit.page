@@ -1,0 +1,14 @@
+<apex:page standardController="Trip__c">    
+    <apex:form >
+        <apex:pageblock title="Edit Trip" mode="edit">
+            <apex:pageblockButtons >
+                <apex:commandButton action="{!Save}" value="Save"/>
+            </apex:pageblockButtons>
+            <apex:pageblockSection title="Trip data">
+                <apex:inputField value="{!Trip__c.Name}"/>
+                <apex:inputField value="{!Trip__c.Minimal_Age__c}"/>
+                <apex:inputField value="{!Trip__c.Start_Date__c}"/>
+            </apex:pageblockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>
