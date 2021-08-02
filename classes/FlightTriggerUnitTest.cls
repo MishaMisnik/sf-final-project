@@ -1,5 +1,6 @@
 @IsTest
 private class FlightTriggerUnitTest {
+    
     @TestSetup
     static void setup() {
         List<Tourist__c> tourists = new List<Tourist__c> { 

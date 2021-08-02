@@ -17,6 +17,8 @@ public inherited sharing class TouristRegistrationController {
             result = tourist;
         } catch (Dmlexception ex) {
             System.debug('Error : ' + ex.getMessage());
+        }  catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
 
         return result;

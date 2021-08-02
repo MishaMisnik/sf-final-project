@@ -18,6 +18,8 @@ public class TripTriggerHandler {
             delete ProductManager.getByTripId(TripServise.getIds(trips));
         } catch (DmlException ex) {
             System.debug('Error : ' + ex.getMessage());
+        }  catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
     }
 }

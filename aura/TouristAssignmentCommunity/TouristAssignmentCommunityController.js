@@ -71,7 +71,8 @@
         helper.createFlight(cmp).then(function(result) {
             if (result) {
                 helper.showToast($A.get('$Label.c.Success'), $A.get('$Label.c.CreateComplete'));
-                $A.get('e.force:refreshView').fire();
+                const updateData = cmp.get('c.updateData');
+                $A.enqueueAction(updateData);
             } else {
                 helper.showToast($A.get('$Label.c.Error'), $A.get('$Label.c.CreateFlightsError'));
             }

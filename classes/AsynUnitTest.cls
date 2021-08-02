@@ -1,5 +1,6 @@
 @IsTest
 public class AsynUnitTest {
+    
     @testSetup
     static void setup() {
         Tourist__c tourist = new Tourist__c(

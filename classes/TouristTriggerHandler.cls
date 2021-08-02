@@ -37,6 +37,8 @@ public class TouristTriggerHandler{
             update flightsToUpdate;
         } catch(DmlException e) {
             System.debug('Error : ' + e.getMessage());
+        }  catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
     }
 }

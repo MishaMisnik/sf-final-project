@@ -24,6 +24,8 @@ public class LeadServise {
         	Messaging.sendEmail(allMsg);    
         } catch (EmailException e) {
             System.debug('Error : ' + e.getMessage());
+        }  catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
     }
 }

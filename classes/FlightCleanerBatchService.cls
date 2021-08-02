@@ -56,6 +56,8 @@ public class FlightCleanerBatchService {
             Messaging.SendEmailResult[] results = Messaging.sendEmail(messages);
         } catch (EmailException e) {
             System.debug('Error : ' + e.getMessage());
+        } catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
     }
 }

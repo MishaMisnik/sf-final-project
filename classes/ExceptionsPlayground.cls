@@ -15,9 +15,9 @@ public class ExceptionsPlayground {
         try {
             generateCustomException();
             generateRegularException();
-        } catch(CustomException ex) {
+        } catch (CustomException ex) {
             System.debug(ex.getMessage());
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             System.debug(ex.getMessage());
         } finally {
             System.debug('Final');

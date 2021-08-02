@@ -1,4 +1,4 @@
-<aura:component controller='AvailableTouristsController' implements='flexipage:availableForAllPageTypes, force:hasRecordId, force:lightningQuickAction' access='global'>
+<aura:component controller='AvailableTouristsController' implements='flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickAction' access='global'>
     
     <aura:attribute name='columns' type='List' default='[]' access='public'/>
     <aura:attribute name='tourists' type='List' default='[]' access='public'/>

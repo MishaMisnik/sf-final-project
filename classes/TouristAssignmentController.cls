@@ -1,4 +1,4 @@
-public inherited sharing class TouristAssignmentController {
+public without sharing class TouristAssignmentController {
     
     @AuraEnabled(cacheable = true)
     public static List<Trip__c> getTrips(Tourist__c tourist) {

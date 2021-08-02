@@ -20,6 +20,8 @@ public class PriceBookServise {
             upsert entryPB;
         } catch (DmlException ex) {
             System.debug('Error : ' + ex.getMessage());
+        }  catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
         
         return entryPB;
@@ -45,6 +47,8 @@ public class PriceBookServise {
             upsert entryPB;
         } catch (DmlException ex) {
             System.debug('Error : ' + ex.getMessage());
+        }  catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
         
         return entryPB;

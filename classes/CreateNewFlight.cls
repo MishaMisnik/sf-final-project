@@ -13,6 +13,7 @@ public class CreateNewFlight {
                     Tourist__c = tourist.id,
                   	Trip__c = trip.id
                 );
+
                 flights.add(flight);
             }
         }
@@ -20,6 +21,8 @@ public class CreateNewFlight {
         try {
             insert flights;
         } catch (DmlException e) {
+            System.debug('Error : ' + e.getMessage());
+        } catch (Exception e) {
             System.debug('Error : ' + e.getMessage());
         }
     }

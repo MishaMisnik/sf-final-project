@@ -10,6 +10,7 @@
             trips.setCallback(this, function(res) {
                 const state = res.getState();
                 const values = res.getReturnValue();
+                
                 if (state == 'SUCCESS') {
                     resolve(values); 
                 }

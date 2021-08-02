@@ -3,10 +3,11 @@
     <aura:attribute name='zoomLevel' type='Integer' access='public'/>
     <aura:attribute name='isTripSelected' type='Boolean' default='false' access='public'/>
     
-    <lightning:card variant='Narrow' class='slds-p-around_medium'>
+    <lightning:card variant='Narrow' class='mapSize'>
         <aura:if isTrue='{!v.isTripSelected}'>
             <lightning:map mapMarkers='{! v.mapMarkers }' 
-                           zoomLevel='{! v.zoomLevel }' />
+                           zoomLevel='{! v.zoomLevel }' 
+                           class='mapSize'/>
             <aura:set attribute='else'>
                 <div class='slds-align_absolute-center'>
                     {!format($Label.c.TripComplete)}

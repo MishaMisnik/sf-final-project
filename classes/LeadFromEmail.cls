@@ -17,6 +17,8 @@ global class LeadFromEmail implements Messaging.InboundEmailHandler{
             insert newLead;
         } catch (DmlException ex) {
             System.debug('Error: ' + ex.getMessage());
+        }  catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
         
         return result;

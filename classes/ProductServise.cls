@@ -19,6 +19,8 @@ public class ProductServise {
             insert products;            
         } catch (DmlException e) {
             System.debug('Error : ' + e.getMessage());
+        }  catch (Exception e) {
+            System.debug('Error : ' + e.getMessage());
         }
         
         return products;

@@ -16,8 +16,7 @@
                       recordId='{!v.recordId}'
                       fields='Id, Name, LastName__c, Age__c'
                       targetFields='{!v.tourist}' 
-                      recordUpdated='{!c.updateData}' />
-    
+                      recordUpdated='{!c.updateData}'/>
     
     <aura:if isTrue='{!v.isIdNull}'>
         <div class='slds-box'>
@@ -32,7 +31,7 @@
                 </div>  
             </aura:if>
             
-            <lightning:card variant='Narrow' class='slds-p-around_medium'>
+            <lightning:card variant='Narrow' class='slds-p-around_medium tripsHeight'>
                 <lightning:layout>
                     <lightning:layoutItem flexibility='auto' padding='around-small'>
                         <lightning:combobox aura:id='combobox' 
@@ -65,7 +64,7 @@
             </lightning:card>
             
             <lightning:card variant='Narrow' class='slds-p-around_medium'>
-                <lightning:layout>
+                <lightning:layout class='dataHeight'>
                     <lightning:layoutItem flexibility='auto' padding='around-small'>
                         <label class='slds-form-element__label slds-text-title_bold slds-border_bottom'>{!format($Label.c.TripInformation)}</label>
                         <c:TripRecordPage selectedTripId='{!v.selectedTripId}'
