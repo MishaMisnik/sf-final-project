@@ -1,7 +1,7 @@
 <aura:component controller='SendEmailController' implements='flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickActionWithoutHeader' access='global'>
 	
     <aura:attribute name='recordId' type='String' access='public'/>
-    <aura:attribute name='tourist' type='Tourist__c' default='[]' access='private'/>
+    <aura:attribute name='tourist' type='Tourist__c' access='private'/>
     <aura:attribute name='email' type='String' access='private'/>
 
 	<force:recordData aura:id='recordLoader'

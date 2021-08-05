@@ -24,8 +24,8 @@ public inherited sharing class TouristRegistrationController {
         return result;
     }
 
-    @AuraEnabled
-    public static Constants getAllConstants() {
-        return new Constants();
+    @AuraEnabled(cacheable = true)
+    public static String getConstant() {
+        return Constants.COMMUNITY_TOURIST_ASSIGNMENT_URL;
     }
 }

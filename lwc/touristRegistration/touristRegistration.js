@@ -1,6 +1,6 @@
 import { LightningElement, track, wire } from 'lwc';
 import createNewTourist from '@salesforce/apex/TouristRegistrationController.createNewTourist';
-import constants from '@salesforce/apex/TouristRegistrationController.getAllConstants';
+import constant from '@salesforce/apex/TouristRegistrationController.getConstant';
 
 export default class TouristRegistration extends LightningElement {
     @track firstName;
@@ -20,13 +20,16 @@ export default class TouristRegistration extends LightningElement {
         } else {
             button[0].variant = 'destructive';
         }
-
-        createNewTourist({firstName: this.firstName, lastName : this.lastName, email : this.email, birthday : this.birthday}).then(result => {
-            if (result) {
+        
+        createNewTourist({firstName: this.firstName, lastName : this.lastName, email : this.email, birthday : this.birthday}).then(touristResult => {
+            if (touristResult) {
                 button[0].variant = 'success';
-                window.location.assign(constants.COMMUNITY_TOURIST_ASSIGNMENT_URL + '?recordId=' + result.Id);
+                constant().then(constantResult => {
+                    if (constantResult){
+                        window.location.assign(constantResult + '?recordId=' + touristResult.Id);
+                    } 
+                });
             }
         });
-
     }
 }

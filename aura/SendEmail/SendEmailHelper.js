@@ -5,7 +5,7 @@
             
             email.setParams({
                 'touristEmail' : cmp.get('v.email'),
-                'urlLink' : ($A.get('$Label.c.CommunityURL') + '/s/tourist-assignment?recordId=' + cmp.get('v.recordId'))
+                'urlLink' : ($A.get('$Label.c.CommunityURL') + '/s/tourist-assignment?recordId=' + cmp.get('v.tourist.Id'))
             });
             
             email.setCallback(this, function(res) {

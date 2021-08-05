@@ -12,10 +12,10 @@ public class Constants {
     public static final Integer CONFLICT_400 = 400;
     public static final Integer INTERNAL_ERROR_500 = 500;
     
-    public static final String COMMUNITY_URL = 'https://resilient-koala-l1pyav-developer-edition.ap24.force.com/TouristAssignment/s/';
-    public static final String COMMUNITY_TOURIST_ASSIGNMENT_URL = 'https://resilient-koala-l1pyav-developer-edition.ap24.force.com/TouristAssignment/s/tourist-assignment';
-    public static final String COMMUNITY_TOURIST_REGISTRATION_URL = 'https://resilient-koala-l1pyav-developer-edition.ap24.force.com/TouristAssignment/s/tourist-registration';
-    public static final String COMMUNITY_TOURIST_PRICELIST_URL = 'https://resilient-koala-l1pyav-developer-edition.ap24.force.com/TouristAssignment/s/price-list';
+    public static final String COMMUNITY_URL = URL.getSalesforceBaseUrl().toExternalForm() + '/TouristAssignment/s/';
+    public static final String COMMUNITY_TOURIST_ASSIGNMENT_URL = URL.getSalesforceBaseUrl().toExternalForm() + '/TouristAssignment/s/tourist-assignment';
+    public static final String COMMUNITY_TOURIST_REGISTRATION_URL = URL.getSalesforceBaseUrl().toExternalForm() + '/TouristAssignment/s/tourist-registration';
+    public static final String COMMUNITY_TOURIST_PRICELIST_URL = URL.getSalesforceBaseUrl().toExternalForm() + '/TouristAssignment/s/price-list';
     
     public static final String TRIP_PRICE_BOOK = 'Trips';
     
